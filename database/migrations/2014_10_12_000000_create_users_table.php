@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('token');
             $table->string('prodi');
             $table->string('nim', 9);
-            $table->int('role');
+            $table->integer('role');
         });
     }
 
