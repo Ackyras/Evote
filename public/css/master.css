@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background: linear-gradient(180.65deg, #99400C 0.52%, rgba(255, 255, 255, 0) 99.44%),
+    linear-gradient(180deg, #4D3625 0%, rgba(131, 77, 37, 0.706141) 29.39%, rgba(200, 93, 12, 0.532779) 46.72%, rgba(129, 72, 28, 0.417205) 58.28%, rgba(148, 75, 20, 0.282368) 71.76%, rgba(148, 81, 30, 0.186056) 81.39%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(50% 24.84% at 100% 75.16%, #8C4B2C 0%, #BB5D26 64.58%, #FA8229 99.99%, #A55F2A 100%);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 1px black solid;
+}
+
+.login {
+    position: relative;
+    margin-left: auto;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    background: #C4C4C4;
+    text-align: center;
+    border: 1px black solid;
+}
+
+.login a {
+    padding: 5px;
+}
+
+.header {
+    display: flex;
+    background: #C67F5D;
+}
+
+.banner {
+    background: #BB713A;
+    align-items: center;
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.banner img{
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.img1{
+    margin-left: 0;
+    left: 0;
+}
+
+.img2{
+    right: 0;
+}
+
+.banner h1{
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 200px;
+}
+
+.content h1{
+    font-size: medium;
+}
+
+.panduan{
+    width: 90%;
+    border: 1px solid black;
+    
+}
