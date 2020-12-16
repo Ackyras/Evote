@@ -10,6 +10,7 @@
       box-sizing: border-box;
     }
     .container{
+      display: block;
       width: 50%;
       height: 100%;
       position: relative;
@@ -42,19 +43,55 @@
     .form{
       position: relative;
       margin: auto;
+      margin-top: 100px;
       width: 50%;
       height: fit-content;
       background: linear-gradient(138.8deg, #A55F2A 2%, rgba(207, 112, 24, 0.58) 95.24%);
       border: 1px solid #AF2121;
       box-sizing: border-box;
     }
+    .tag{
+      top:75px;
+      display: flex;
+      position: relative;
+      margin-right:auto;
+      margin-left: auto;
+      width: 80%;
+      background: #BB713A;
+      border: 1px solid #CDA953;
+      box-sizing: border-box;
+    }
+    .tag img{
+      width: 15%;
+      height: auto;
+    }
+    .img1{
+      margin-left: 0.5%;
+      margin-top: 0.5%;
+      margin-bottom: 0.5%;
+    }
+    .img2{
+      margin-right: 0.5%;
+      margin-top: 0.5%;
+      margin-bottom: 0.5%;
+    }
+    .tag h1{
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-right: auto;
+      margin-left: auto;
+    }
   </style>
   <title>Document</title>
 </head>
 <body>
   <div class="container">
-    <div class="header">
-
+    <div class="tag">
+      <img class="img1" src="{{asset('/img/pmk.jpeg')}}" alt="logo-pmk">
+      {{-- <center> --}}
+        <h1>Pemira PMK ITERA 2020</h1>
+      {{-- </center> --}}
+      <img class="img2" src="{{asset('/img/pemira.png')}}" alt="logo-pemira">
     </div>
     @yield('form')
   </div>
