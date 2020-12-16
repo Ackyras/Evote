@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\DB;
 
 class authController extends Controller
 {
@@ -16,11 +17,14 @@ class authController extends Controller
     public function login(Request $request)
     {
         $credential = $request->only('email', 'password');
+        $cek = DB::table('users')->where('email', '=', $request->input('email'))->first();
+        if ($cek->pilih != 0) {
+            return redirect()->route('login')->with('msg', 'Anda sudah memilih!');
+        }
         if (!Auth::attempt($credential)) {
-            dd("berhasil");
             return redirect()->route('login');
         } else {
-            return redirect()->route('hasil');
+            return redirect()->route('home');
         }
     }
 
@@ -28,6 +32,6 @@ class authController extends Controller
     {
         $req->session()->flush();
         Auth::logout();
-        return Redirect()->route('login');
+        return Redirect()->route('home');
     }
 }

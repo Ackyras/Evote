@@ -21,6 +21,10 @@ class votingController extends Controller
     {
         $calon = $req->input('vote');
         $user = Auth::user()->id;
+        $pilih = Auth::user()->pilih;
+        if ($pilih != 0) {
+            return redirect()->route('logout');
+        }
         if ($calon == 1) {
             try {
                 DB::table('voting')->increment('calon1');
