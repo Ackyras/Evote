@@ -18,9 +18,12 @@ use Illuminate\Support\Facades\Route;
 
 //home
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 })->name('home');
 
+Route::get('/profil', function () {
+    return view('profil');
+})->name('profil');
 //Hasil vote
 Route::get('/hasil',  [votingController::class, 'index'])->name('hasil');
 

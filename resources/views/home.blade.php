@@ -1,8 +1,9 @@
 @extends('layout.homemaster')
 
-@section('panduan')
-    <div class="panduan">
-      <img src="{{asset('img/panduan.jpg')}}" alt="Panduan">
-      
+@section('content')
+<center>
+    <div class="content">
+        <img src="{{asset('img/panduan.jpg')}}" alt="Panduan" class="panduan">
     </div>
+</center>
 @endsection

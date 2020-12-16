@@ -10,12 +10,14 @@
       box-sizing: border-box;
     }
     body{
-      height: 1000px;
+      
     }
     .container{
+      padding-top: 25px;
+      margin-top: 45px;
       display: block;
-      width: 480px;
-      height:100%;
+      max-width: 550px;
+      height: 100%;
       position: relative;
       margin-right: auto;
       margin-left: auto;   
@@ -49,7 +51,6 @@
       padding: 10px;
     }
     .tag{
-      top:75px;
       display: flex;
       position: relative;
       margin-right:auto;
@@ -79,7 +80,7 @@
       margin-bottom: auto;
       margin-right: auto;
       margin-left: auto;
-      font-size: larger;
+      font-size: xx-large;
       text-align: center;
     }
     .header{
@@ -93,11 +94,22 @@
     }
     .mainbutton{
       position: absolute;
-      width: 65px;
+      width: fit-content;
       height: 30px;
       top: 7px;
       left: auto;
       right: 7px;
+
+      background: #C4C4C4;
+      border-radius: 5px;
+    }
+    .nextbutton{
+      /* top: 20px; */
+      position: relative;
+      width: fit-content;
+      height: 30px;
+      margin-top: 25px;
+      margin-bottom: 50px;
 
       background: #C4C4C4;
       border-radius: 5px;
@@ -108,24 +120,55 @@
       position: relative;
       margin: auto;
       border: 1px solid #000000;
-      
+
       /* backdrop-filter: blur(4px); */
 
       /* Note: backdrop-filter has minimal browser support */
       /* transform: matrix(1, 0, 0, 1, 0, 0); */
     }
+    .content{
+      display: inline-flex;
+      padding-top: 25px;
+      position: relative;
+      /* top: 50px; */
+      width: 95%;
+      height: auto;
+    }
+    .headline{
+      padding-top: 25px;
+      display: block;
+    }
+    .pkiri{
+      position: relative;
+      display: block;
+      width: 50%;
+    }
+    .pkiri img{
+      width: 80%;
+      height: auto;
+    }
+
+    .pkanan{
+      position: relative;
+      display: block;
+      width: 50%;
+    }
+    .pkanan img{
+      display: block;
+      width: 50%;
+    }
   </style>
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
+  <div class="header">
       @if (!Auth::check())
         <button onclick="location.href='{{route('login')}}'"type="button" class="mainbutton">Login</button>
       @else 
         <button onclick="location.href='{{route('logout')}}'"type="button" class="mainbutton">Logout</button>
       @endif
     </div>
+  <div class="container">
     <div class="tag">
       <img class="img1" src="{{asset('/img/pmk.jpeg')}}" alt="logo-pmk">
       {{-- <center> --}}
@@ -134,6 +177,11 @@
       <img class="img2" src="{{asset('/img/pemira.png')}}" alt="logo-pemira">
     </div>
     @yield('content')
+    @if(Auth::check())
+    <center>
+      <button onclick="location.href='{{route('profil')}}'"type="button" class="nextbutton">Selanjutnya</button>
+    </center>
+    @endif
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
