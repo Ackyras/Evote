@@ -9,8 +9,8 @@
     *{
       box-sizing: border-box;
     }
-    body{
-      
+    .dummy{
+      height: 100px;
     }
     .container{
       padding-top: 25px;
