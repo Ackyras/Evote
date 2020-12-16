@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\hasilController;
+use App\Http\Controllers\mailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +17,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::get('/hasil',  [hasilController::class, 'index']);
+
+Route::get('/voting/{id}',  [hasilController::class, 'voteShow'])->name('voteShow');
+Route::post('/voting/{id}',  [hasilController::class, 'vote'])->name('vote');
+
+Route::get('/send', [mailController::class, 'Send']);
+

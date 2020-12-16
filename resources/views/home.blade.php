@@ -1,5 +1,6 @@
-@extends('layout.master')
+@extends('layout.homemaster')
 @section('title','home')
+@section('link','login')
 @section('content')
     <div class="content">
       <center>
@@ -9,4 +10,5 @@
         </div>
       </center>
     </div>
+    @yield('login')
 @endsection

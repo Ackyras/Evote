@@ -9,9 +9,6 @@
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <div class="login"><a href="/login">Login</a></div>
-    </div>
     <div class="banner">
       <img class="img1" src="{{asset('img/babi.jpg')}}" alt="">
       <h1>Pemira PMK 2020</h1>
