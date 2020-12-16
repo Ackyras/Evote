@@ -15,14 +15,9 @@ class authController extends Controller
 
     public function login(Request $request)
     {
-        $request()->validate(
-            [
-                'email' => 'required',
-                'password' => 'required'
-            ]
-        );
-        $credential = $request->only('username', 'password');
+        $credential = $request->only('email', 'password');
         if (!Auth::attempt($credential)) {
+            dd("berhasil");
             return redirect()->route('login');
         } else {
             return redirect()->route('hasil');
