@@ -38,8 +38,9 @@
       border-radius: 10px;
       position: relative;
       margin: auto;
-      margin-top: 100px;
-      width: 40%;
+      margin-top: 50%;
+      margin-bottom: auto;
+      width: 95%;
       height: fit-content;
       background: linear-gradient(138.8deg, #A55F2A 2%, rgba(207, 112, 24, 0.58) 95.24%);
       border: 1px solid #AF2121;
@@ -104,28 +105,20 @@
     }
     .panduan{
       width: 95%;
-      height: auto;
-      position: relative;
-      margin: auto;
-      border: 1px solid #000000;
-      
-      /* backdrop-filter: blur(4px); */
 
-      /* Note: backdrop-filter has minimal browser support */
-      /* transform: matrix(1, 0, 0, 1, 0, 0); */
     }
   </style>
   <title>Document</title>
 </head>
 <body>
   <div class="container">
-    <div class="header">
+    {{-- <div class="header">
       @if (!Auth::check())
         <button onclick="location.href='{{route('login')}}'"type="button" class="mainbutton">Login</button>
       @else 
         <button onclick="location.href='{{route('logout')}}'"type="button" class="mainbutton">Logout</button>
       @endif
-    </div>
+    </div> --}}
     <div class="tag">
       <img class="img1" src="{{asset('/img/pmk.jpeg')}}" alt="logo-pmk">
       {{-- <center> --}}
@@ -133,7 +126,7 @@
       {{-- </center> --}}
       <img class="img2" src="{{asset('/img/pemira.png')}}" alt="logo-pemira">
     </div>
-    @yield('content')
+    @yield('form')
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
