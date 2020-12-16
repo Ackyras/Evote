@@ -17,10 +17,10 @@ class ceklogin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::check()){
+        if (!Auth::check()) {
             return redirect('login');
         }
-        $user = Auth::user();
+        // $user = Auth::user();
         // return $next($request);
     }
 }

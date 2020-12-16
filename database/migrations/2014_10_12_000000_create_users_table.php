@@ -21,7 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('prodi');
             $table->string('token');
+            $table->string('passcode');
             $table->integer('pilih');
+            $table->string('tgl');
+            $table->integer('angkatan');
             $table->timestamps();
         });
     }

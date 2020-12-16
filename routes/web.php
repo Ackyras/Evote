@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\authController;
-use App\Http\Controllers\hasilController;
+use App\Http\Controllers\votingController;
 use App\Http\Controllers\mailController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 //home
 Route::get('/', function () {
-    return view('Panduan');
+    return view('welcome');
 })->name('home');
 
 //Hasil vote
@@ -31,11 +31,12 @@ Route::post('/voting/{id}',  [votingController::class, 'vote'])->name('vote');
 //Auto Mail
 Route::get('/send', [mailController::class, 'Send'])->name('send');
 
-//login
+//authentication
 Route::get('/login', [authController::class, 'index'])->name('login');
-Route::post('/login', [authController::class, 'login'])->name('proseslogin');
+Route::post('/', [authController::class, 'login'])->name('proseslogin');
+Route::get('/logout', [authController::class, 'logout'])->name('logout');
 
 //test
 Route::get('/test', function () {
-    return view('welcome');    
+    return view('welcome');
 });

@@ -23,7 +23,8 @@ class User extends Authenticatable
         'prodi',
         'password',
         'token',
-        'pilih',
+        'angkatan',
+        'tgl',
     ];
 
     // /**
