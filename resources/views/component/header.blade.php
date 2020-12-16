@@ -2,6 +2,7 @@
 @section('header')
 
     <div class="header">
-      <button href="{{route('login')}}">login</button>
+      <button class="mainbutton" href="{{route('login')}}">login</button>
     </div>
+
 @endsection

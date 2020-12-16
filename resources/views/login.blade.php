@@ -1,6 +1,7 @@
 @extends('layout.loginmaster')
 
 @section('form')
+<div class="form">
   <form method="POST" action="{{route('proseslogin')}}">
     @csrf
     <div class="row mb-3">
@@ -15,7 +16,9 @@
         <input type="password" class="form-control" id="inputPassword3">
       </div>
     </div>
-    
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <center>
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </center>
   </form>
+</div>
 @endsection
