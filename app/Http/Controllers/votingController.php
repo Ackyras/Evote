@@ -11,10 +11,8 @@ class votingController extends Controller
 {
     public function index()
     {
-        $data1 = DB::table('voting')->find(1);
-        $data2 = DB::table('voting')->find(2);
-
-        return view('hasil', ['data1' => $data1, 'data2' => $data2]);
+        $data = DB::table('voting')->first();
+        return view('hasil', ['datas' => $data]);
     }
 
     public function vote(Request $req)
