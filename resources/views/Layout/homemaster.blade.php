@@ -9,10 +9,13 @@
     *{
       box-sizing: border-box;
     }
+    body{
+      height: 1000px;
+    }
     .container{
       display: block;
-      width: 50%;
-      height: 100%;
+      width: 480px;
+      height:100%;
       position: relative;
       margin-right: auto;
       margin-left: auto;   
@@ -41,14 +44,19 @@
       border-radius: 5px;
     }
     .form{
+      display: none;
+      border-radius: 10px;
       position: relative;
       margin: auto;
       margin-top: 100px;
-      width: 50%;
+      width: 40%;
       height: fit-content;
       background: linear-gradient(138.8deg, #A55F2A 2%, rgba(207, 112, 24, 0.58) 95.24%);
       border: 1px solid #AF2121;
       box-sizing: border-box;
+    }
+    .form form{
+      padding: 10px;
     }
     .tag{
       top:75px;
@@ -56,7 +64,8 @@
       position: relative;
       margin-right:auto;
       margin-left: auto;
-      width: 80%;
+      width: 95%;
+      height: auto;
       background: #BB713A;
       border: 1px solid #CDA953;
       box-sizing: border-box;
@@ -80,6 +89,8 @@
       margin-bottom: auto;
       margin-right: auto;
       margin-left: auto;
+      font-size: larger;
+      text-align: center;
     }
   </style>
   <title>Document</title>

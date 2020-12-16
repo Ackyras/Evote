@@ -1,4 +1,4 @@
-@extends('layout.loginmaster')
+@extends('layout.homemaster')
 
 @section('form')
 <div class="form">
