@@ -22,7 +22,8 @@ class User extends Authenticatable
         'nim',
         'prodi',
         'password',
-        'token,'
+        'token',
+        'pilih',
     ];
 
     // /**

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\authController;
 use App\Http\Controllers\hasilController;
 use App\Http\Controllers\mailController;
 use Illuminate\Support\Facades\Route;
@@ -15,18 +16,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//home
 Route::get('/', function () {
-    return view('home');
+    return view('Panduan');
 })->name('home');
 
-Route::get('/login', function () {
-    return view('login');
+//Hasil vote
+Route::get('/hasil',  [votingController::class, 'index'])->name('hasil');
+
+//Counting and Passing
+Route::get('/voting/{id}',  [votingController::class, 'voteShow'])->name('voteShow');
+Route::post('/voting/{id}',  [votingController::class, 'vote'])->name('vote');
+
+//Auto Mail
+Route::get('/send', [mailController::class, 'Send'])->name('send');
+
+//login
+Route::get('/login', [authController::class, 'index'])->name('login');
+Route::post('/login', [authController::class, 'login'])->name('proseslogin');
+
+//test
+Route::get('/test', function () {
+    return view('welcome');    
 });
-
-Route::get('/hasil',  [hasilController::class, 'index']);
-
-Route::get('/voting/{id}',  [hasilController::class, 'voteShow'])->name('voteShow');
-Route::post('/voting/{id}',  [hasilController::class, 'vote'])->name('vote');
-
-Route::get('/send', [mailController::class, 'Send']);
-

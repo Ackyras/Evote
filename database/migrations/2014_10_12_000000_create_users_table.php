@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('prodi');
             $table->string('token');
+            $table->integer('pilih');
             $table->timestamps();
         });
     }

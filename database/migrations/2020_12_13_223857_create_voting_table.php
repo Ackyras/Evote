@@ -15,8 +15,8 @@ class CreateVotingTable extends Migration
     {
         Schema::create('voting', function (Blueprint $table) {
             $table->id();
-            $table->integer('calon1')->default(0);
-            $table->integer('calon2')->default(0);
+            $table->integer('urutcalon')->default(0);
+            $table->integer('total')->default(0);
             $table->timestamps();
         });
     }

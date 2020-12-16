@@ -22,10 +22,10 @@ google.charts.setOnLoadCallback(drawChart);
 
 // Draw the chart and set the chart values
 function drawChart() {
-  var calon1 = {{ $data->calon1}};
-  var calon2 = {{ $data->calon2}};
+  var calon1 = {{ $data1->total}};
+  var calon2 = {{ $data2->total}};
   var data = google.visualization.arrayToDataTable([
-  ['Task', 'Hours per Day'],
+  ['Urut Calon', 'Total suara'],
   ['Calon 1', calon1],
   ['Calon 2', calon2]
 ]);
