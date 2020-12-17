@@ -1,5 +1,7 @@
 @extends('layout.homemaster')
-
+@section('title')
+    Home
+@endsection
 @section('content')
 <center>
     <div class="content">

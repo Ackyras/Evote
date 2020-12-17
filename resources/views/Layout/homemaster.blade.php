@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" media="screen and (max-device-height: 799px)" href="http://foo.bar.com/short-styles.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <style>
     *{
@@ -11,6 +12,9 @@
     }
     .dummy{
       height: 100px;
+    }
+    body{
+      height: device-height;
     }
     .container{
       padding-top: 25px;
@@ -140,22 +144,30 @@
     }
     .pkiri{
       position: relative;
-      display: block;
-      width: 50%;
-    }
-    .pkiri img{
-      width: 80%;
-      height: auto;
+      display: flex;
+      width: 40%;
+      margin-left: 0;
+      margin-right: auto;
     }
 
     .pkanan{
       position: relative;
-      display: block;
-      width: 50%;
+      display: flex;
+      width: 40%;
+      margin-left: auto;
+      margin-right: 0;
     }
-    .pkanan img{
-      display: block;
-      width: 50%;
+    .profil{
+      width: fit-content;
+      height: fit-content;
+    }
+    .profil img{
+      box-sizing: content-box;
+      border: #000000 1px solid;
+      width: 200px;
+    }
+    .contentp{
+      display: flex;
     }
   </style>
   <title>Document</title>
