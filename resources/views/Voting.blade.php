@@ -20,7 +20,7 @@
   <form method="POST" action="{{route('vote', $data)}}">
     @csrf
     <input type="hidden" name="vote" value="{{$data}}" id="">
-    <button type="submnit">Vote</button>
+    <button class="submitvote" type="submnit">Vote</button>
   </form>
 </div>
 @if(session('msg'))

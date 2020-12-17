@@ -5,8 +5,10 @@
 <div class="ccontent">
     @if(empty($data))
    <center> 
-    <h2>Tidak di Temukan</h2>
-    <b>Mohon Periksa Kembali Data Anda</b>
+       <div class="dd bg-light">
+           <h2>Tidak di Temukan</h2>   
+           <b>Mohon Periksa Kembali Data Anda</b>
+        </div>
    </center>
 @else
 <p>Username : {{$data->email}}</p>

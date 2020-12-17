@@ -10,6 +10,12 @@
     *{
       box-sizing: border-box;
     }
+    .submitvote{
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+    
     .dummy{
       height: 100px;
     }
@@ -215,10 +221,12 @@
       <img class="img2" src="{{asset('/img/pemira.png')}}" alt="logo-pemira">
     </div>
     @yield('content')
-    @if(Request::path() == '/profil')
+    @if(Auth::check())
+    @if(Route::current()->getname()=='home')
     <center>
       <button onclick="location.href='{{route('profil')}}'"type="button" class="nextbutton">Selanjutnya</button>
     </center>
+    @endif
     @endif
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>

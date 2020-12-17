@@ -9,6 +9,7 @@
     </center>
     <form method="POST" action="{{route('proseslogin')}}">
       @csrf
+      <p>{{session('msg')}}</p>
       <div class="row mb-3">
         <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-10">
