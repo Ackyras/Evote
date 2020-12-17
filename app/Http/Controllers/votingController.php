@@ -67,9 +67,7 @@ class votingController extends Controller
     }
 
     /*
-    DB_DATABASE=pemirapm_evote
-DB_USERNAME=admin@pemirapmk.online
-DB_PASSWORD=C7X7(=Awm$X(
+    
 
     */
     public function cari(Request $req)
