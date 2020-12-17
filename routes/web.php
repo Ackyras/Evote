@@ -43,3 +43,6 @@ Route::get('/logout', [authController::class, 'logout'])->name('logout');
 Route::get('/test', function () {
     return view('welcome');
 });
+
+Route::get('/cari',     [votingController::class, 'cariShow'])->name('cariShow');
+Route::post('/cari',     [votingController::class, 'cari'])->name('cari');
