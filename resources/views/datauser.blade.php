@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout.homemaster')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
+@section('content')
+<center>
+<div class="ccontent">
     @if(empty($data))
-    tidakada
-    @else
-    {{$data->email}}
-    {{$data->passcode}}
-    @endempty
-</body>
-
-</html>
+   <center> 
+    <h2>Tidak di Temukan</h2>
+    <b>Mohon Periksa Kembali Data Anda</b>
+   </center>
+@else
+<p>Username : {{$data->email}}</p>
+<p>Password : {{$data->passcode}}</p>
+@endif
+</div>
+</center>
+@endsection

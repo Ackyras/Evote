@@ -1,5 +1,7 @@
 @extends('layout.loginmaster')
-
+@section('title')
+    Login
+@endsection
 @section('form')
   <div class="form">
     <center>

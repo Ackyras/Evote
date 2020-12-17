@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="30" >
+  <meta http-equiv="refresh" content="300" >
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>hasil</title>
 </head>
@@ -22,12 +22,10 @@ google.charts.setOnLoadCallback(drawChart);
 
 // Draw the chart and set the chart values
 function drawChart() {
-  var calon1 = {{ $data1->total}};
-  var calon2 = {{ $data2->total}};
   var data = google.visualization.arrayToDataTable([
   ['Urut Calon', 'Total suara'],
-  ['Calon 1', calon1],
-  ['Calon 2', calon2]
+  ['Calon 1', {{ $datas->calom1}}],
+  ['Calon 2', {{ $datas->calom2}}]
 ]);
 
   // Optional; add a title and set the width and height of the chart

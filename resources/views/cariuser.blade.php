@@ -1,34 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <form action="{{route('cari')}}" method="POST">
-        @csrf
+@extends('layout.homemaster')
+@section('content')
+<div class="ccontent">
+<center>
+<form action="{{route('cari')}}" method="POST">
+    @csrf
+    <label for="">
+        Masukkan nama depan:
+        <input type="text" name="nama" required>
+    </label>
+    <label for="">
+        Masukkan nim       :
+        <input type="text" name="nim" required>
+    </label><br>
         <label for="">
-            Masukkan nama depan:
-            <input type="text" name="nama" required>
-        </label>
-        <label for="">
-            Masukkan nim:
-            <input type="text" name="nim" required>
-        </label>
-        <label for="">
-            Pilih angkatan
+        Pilih angkatan      
             <select name="angkatan" id="">
                 <option value="2017">2017</option>
                 <option value="2018">2018</option>
                 <option value="2019">2019</option>
                 <option value="2020">2020</option>
             </select>
-        </label>
-        <label for="">
-            <select name="prodi" id="">
+        </label><br>
+        <label for="">Prodi
+            <select name="prodi" id=""><br>
                 <option value="Arsitektur">Arsitektur</option>
                 <option value="Arsitektur Lanskap">Arsitektur Lanskap</option>
                 <option value="Biologi">Biologi</option>
@@ -65,9 +59,9 @@
                 <option value="Teknologi Industri Pertanian">Teknologi Industri Pertanian</option>
                 <option value="Teknologi Pangan">Teknologi Pangan</option>
             </select>
-        </label>
+        </label><br>
         <button type="submit">Cari Data</button>
     </form>
-</body>
-
-</html>
+    </center>
+    </div>   
+@endsection

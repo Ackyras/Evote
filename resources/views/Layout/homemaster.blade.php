@@ -169,8 +169,34 @@
     .contentp{
       display: flex;
     }
+    .vprofil{
+      display: block;
+      position: relative;
+      margin: auto;
+    }
+    .vprofil img{
+      box-sizing: content-box;
+      border: #000000 1px solid;
+      width: 95%;
+    }
+    .ccontent{
+      display: flex;
+      padding-top: 50px;
+      position: relative;
+      margin: auto;
+      /* top: 50px; */
+      width: 95%;
+      height: auto;
+    }
+    /* .ccontent label{
+      position:relative;
+      margin-left: 0;
+      margin-right: auto;
+      left: 0;
+      right: auto;
+    } */
   </style>
-  <title>Document</title>
+  <title>@yield('title')</title>
 </head>
 <body>
   <div class="header">
@@ -189,7 +215,7 @@
       <img class="img2" src="{{asset('/img/pemira.png')}}" alt="logo-pemira">
     </div>
     @yield('content')
-    @if(Auth::check())
+    @if(Request::path() == '/profil')
     <center>
       <button onclick="location.href='{{route('profil')}}'"type="button" class="nextbutton">Selanjutnya</button>
     </center>

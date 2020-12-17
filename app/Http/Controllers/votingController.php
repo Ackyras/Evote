@@ -51,7 +51,6 @@ class votingController extends Controller
     public function voteShow($id)
     {
         if (Auth::check()) {
-            $data = DB::table('voting')->find($id);
             if ($id == 1 || $id == 2) {
                 return view('Voting', ['data' => $id]);
             } else {

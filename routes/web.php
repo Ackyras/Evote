@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 //home
 Route::get('/', function () {
-    return view('home');
+    return view('cariuser');
 })->name('home');
 
 Route::get('/profil', function () {
