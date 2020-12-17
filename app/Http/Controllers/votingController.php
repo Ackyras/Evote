@@ -61,4 +61,27 @@ class votingController extends Controller
             return redirect()->route('login');
         }
     }
+
+    public function cariShow()
+    {
+        return view('cariuser');
+    }
+
+    /*
+    DB_DATABASE=pemirapm_evote
+DB_USERNAME=admin@pemirapmk.online
+DB_PASSWORD=C7X7(=Awm$X(
+
+    */
+    public function cari(Request $req)
+    {
+        $nama = $req->input('nama');
+        $nim = $req->input('nim');
+        $angkatan = $req->input('angkatan');
+        $prodi = $req->input('prodi');
+        $nama = $nama . '%';
+
+        $data = DB::table('users')->select('email', 'passcode')->where('name', 'like', "$nama")->where('nim', 'like', "$nim")->where('angkatan', '=', "$angkatan")->where('prodi', 'like', "$prodi")->first();
+        return view('datauser', ['data' => $data]);
+    }
 }
